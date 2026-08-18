@@ -139,8 +139,6 @@ Grafana Alloy is used as part of the log collection and observability pipeline.
 
 ## Repository Structure
 
-## Repository Structure
-
 ```text
 mini-isp-noc/
 │
@@ -195,7 +193,6 @@ mini-isp-noc/
 
 ## Project Workflow
 
-```text
 Network / Services
         │
         ▼
