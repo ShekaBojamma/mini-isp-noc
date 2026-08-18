@@ -174,7 +174,7 @@ mini-isp-noc/
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ## Key NOC Monitoring Metrics
 
@@ -193,6 +193,7 @@ mini-isp-noc/
 
 ## Project Workflow
 
+```text
 Network / Services
         │
         ▼
@@ -211,24 +212,31 @@ Metrics & Availability Checks
         ▼       ▼        ▼
       NOC    Services    Logs
    Dashboard Dashboard Dashboard
+```
 
 ## Screenshots
 
 ### NOC Command Center
 
-![NOC Command Center](screenshots/noc-command-center.png)
+![NOC Command Center - 01](screenshots/NOC%20Dashboard%20-%2001.png)
+
+![NOC Command Center - 02](screenshots/NOC%20Dashboard%20-02.png)
+
+![NOC Command Center - 03](screenshots/NOC%20Dashboard%20-03.png)
 
 ### NOC Monitoring Dashboard
 
-![NOC Monitoring](screenshots/noc-monitoring.png)
+![NOC Monitoring - 01](screenshots/NOC%20Monitoring%20-01.png)
+
+![NOC Monitoring - 02](screenshots/NOC%20Monitoring-02.png)
 
 ### Internet & Service Monitoring
 
-![Internet Service Monitoring](screenshots/internet-service-monitoring.png)
+![Internet and Service Monitoring](screenshots/Internet%20and%20Service%20Monitoring.png)
 
 ### Logs Dashboard
 
-![Logs Dashboard](screenshots/logs-dashboard.png)
+![Logs Dashboard](screenshots/Logs%20Dashboard.png)
 
 
 ## How to Explore the Project
