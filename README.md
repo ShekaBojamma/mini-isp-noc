@@ -139,6 +139,9 @@ Grafana Alloy is used as part of the log collection and observability pipeline.
 
 ## Repository Structure
 
+## Repository Structure
+
+```text
 mini-isp-noc/
 │
 ├── alloy/
@@ -161,10 +164,13 @@ mini-isp-noc/
 │   └── alerts.yml
 │
 ├── packet-tracer/
-│   └── Packet Tracer topology
+│   └── mini-isp-noc.pkt
 │
 ├── screenshots/
-│   └── Monitoring and topology screenshots
+│   ├── noc-command-center.png
+│   ├── noc-monitoring.png
+│   ├── internet-service-monitoring.png
+│   └── logs-dashboard.png
 │
 ├── docs/
 │
@@ -189,6 +195,7 @@ mini-isp-noc/
 
 ## Project Workflow
 
+```text
 Network / Services
         │
         ▼
