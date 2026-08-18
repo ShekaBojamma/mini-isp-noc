@@ -278,6 +278,101 @@ The main objectives of this project are to demonstrate:
 * Linux-based monitoring infrastructure
 * Integration of multiple observability components
 
+## How to Run
+
+This project can be reproduced using an Ubuntu Linux VM together with Cisco Packet Tracer.
+
+### 1. Network Topology
+
+Open the Packet Tracer project located in:
+
+`packet-tracer/`
+
+Start the ISP topology and verify connectivity between the configured network nodes.
+
+### 2. Prometheus
+
+Prometheus is configured using:
+
+`prometheus/prometheus.yml`
+
+Alerting rules are defined in:
+
+`prometheus/alerts.yml`
+
+Start Prometheus and verify that the configured targets are reachable.
+
+### 3. Node Exporter
+
+Node Exporter provides Linux system metrics including:
+
+- CPU utilization
+- Memory utilization
+- Disk usage
+- Network traffic
+- System uptime
+- Load average
+
+Verify that Prometheus can scrape the Node Exporter endpoint.
+
+### 4. Blackbox Exporter
+
+Blackbox Exporter is configured using:
+
+`blackbox/blackbox.yml`
+
+It is used to monitor network reachability and service availability.
+
+### 5. Loki and Grafana Alloy
+
+Loki provides centralized log storage.
+
+Grafana Alloy is configured using:
+
+`alloy/config.alloy`
+
+Loki configuration is stored in:
+
+`loki/loki-config.yml`
+
+### 6. Grafana
+
+Import the dashboard JSON files from:
+
+`grafana/`
+
+Available dashboards include:
+
+- NOC Command Center
+- NOC Monitoring
+- Internet & Service Monitoring
+- Logs Dashboard
+
+Configure the appropriate Prometheus and Loki data sources in Grafana.
+
+### 7. Verify the Monitoring System
+
+Once the services are running, verify:
+
+- Prometheus targets are **UP**
+- Node Exporter metrics are available
+- Blackbox probes are returning results
+- Grafana dashboards display metrics
+- Loki is receiving logs
+- Grafana can query Loki logs
+- Alert rules are loaded successfully
+
+## Configuration Files
+
+| Component | Configuration |
+|---|---|
+| Prometheus | `prometheus/prometheus.yml` |
+| Prometheus Alerts | `prometheus/alerts.yml` |
+| Blackbox Exporter | `blackbox/blackbox.yml` |
+| Grafana Alloy | `alloy/config.alloy` |
+| Loki | `loki/loki-config.yml` |
+| Grafana | `grafana/*.json` |
+
 ## Future Improvements
 
 Potential future enhancements include:
