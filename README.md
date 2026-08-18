@@ -21,37 +21,48 @@ The system provides visibility into:
 
 ## Architecture
 
-                    ┌──────────────────────────┐
-                    │   Cisco Packet Tracer    │
-                    │      ISP Topology        │
-                    │                          │
-                    │ Routers / Switches /     │
-                    │ Network Nodes            │
-                    └────────────┬─────────────┘
-                                 │
-                                 │ Network Monitoring
-                                 ▼
-                    ┌──────────────────────────┐
-                    │       Ubuntu Linux VM    │
-                    │                          │
-                    │  Prometheus              │
-                    │  Node Exporter           │
-                    │  Blackbox Exporter       │
-                    │  Grafana                 │
-                    │  Loki                    │
-                    │  Grafana Alloy           │
-                    └────────────┬─────────────┘
-                                 │
-                                 ▼
-                    ┌──────────────────────────┐
-                    │       Grafana NOC         │
-                    │        Dashboards         │
-                    │                          │
-                    │ Infrastructure           │
-                    │ Internet & Services       │
-                    │ Logs                      │
-                    │ NOC Command Center        │
-                    └──────────────────────────┘
+                    ┌──────────────────────────────┐
+                    │     Cisco Packet Tracer      │
+                    │        ISP Topology          │
+                    │                              │
+                    │   Routers / Switches /       │
+                    │      Network Nodes           │
+                    └──────────────┬───────────────┘
+                                   │
+                     Network Reachability /
+                       Service Monitoring
+                                   │
+                                   ▼
+                    ┌──────────────────────────────┐
+                    │        Ubuntu Linux VM       │
+                    │                              │
+                    │  ┌────────────────────────┐  │
+                    │  │ Prometheus             │  │
+                    │  │ Node Exporter          │  │
+                    │  │ Blackbox Exporter      │  │
+                    │  └────────────────────────┘  │
+                    │                              │
+                    │  ┌────────────────────────┐  │
+                    │  │ Loki                   │  │
+                    │  │ Grafana Alloy          │  │
+                    │  └────────────────────────┘  │
+                    │                              │
+                    │              │               │
+                    │              ▼               │
+                    │       ┌─────────────┐        │
+                    │       │   Grafana   │        │
+                    │       └─────────────┘        │
+                    └──────────────┬───────────────┘
+                                   │
+                                   ▼
+                    ┌──────────────────────────────┐
+                    │       NOC Dashboards         │
+                    │                              │
+                    │  • NOC Command Center        │
+                    │  • Infrastructure Monitoring │
+                    │  • Internet & Services       │
+                    │  • Centralized Logs          │
+                    └──────────────────────────────┘
 
 
 ## Technologies Used
